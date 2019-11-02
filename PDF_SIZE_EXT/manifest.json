@@ -1,0 +1,30 @@
+  {
+    "name": "File SIZE EXT",
+    "short_name": "SizeExt",
+    "version": "1.0",
+    "description": "Displays file size in google search results.",
+    "permissions": [
+      "activeTab",
+      "https://www.google.com/search?*",
+      "https://*/*"
+    ],
+    "content_scripts": [{
+      "matches": ["https://www.google.com/search?*"],
+      "js": ["content.js"]
+    }],
+    "background": {
+      "matches": ["https://www.google.com/search?*"],
+      "persistant": false,
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_title": "Test Extension"
+    },
+     "icons": {
+      "16": "images/File_Size_Logo_16.png",
+      "32": "images/File_Size_Logo_32.png",
+      "48": "images/File_Size_Logo_48.png",
+      "128": "images/File_Size_Logo_128.png"
+    },
+    "manifest_version": 2
+  }
